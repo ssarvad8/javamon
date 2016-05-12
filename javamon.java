@@ -23,21 +23,6 @@ public class javamon extends Applet implements ActionListener
         stage1 = "Stage: " + stage;
         g.drawString(stage1,25,75);
         g.drawString(counter1,25,100);
-
-        if (stage == 1)
-        {
-            g.setColor(Color.black);
-            g.fillOval(75,150,100,100);
-            g.fillOval(25,250,200,200);
-        }
-        else if (stage == 2)
-        {
-            
-        }
-        else
-        {
-        }
-
     }
 
     public void init() {
@@ -58,21 +43,17 @@ public class javamon extends Applet implements ActionListener
         if (e.getSource() == button1) 
         {
             counter++;
-            repaint();
             if (counter == 20)
             {
                 stage = 2;
-                repaint();
             }
-            else if (counter == 120)
+            else if (counter == 100)
             {
                 stage = 3;
                 repaint();
-            }
-            if (stage == 3)
-            {
                 JOptionPane.showMessageDialog(frame.getComponent(0), "You have reached the final stage!");
             }
         }
+        repaint();
     }
 }
