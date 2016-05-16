@@ -11,6 +11,9 @@ public class javamon extends Applet implements ActionListener
 
     final JFrame frame = new JFrame();
     JPanel panel = new JPanel();
+    
+            JComboBox<String> comboLanguage = new JComboBox<String>();
+    Choice types = new Choice();
 
     public void paint(Graphics g)
     {
@@ -23,6 +26,19 @@ public class javamon extends Applet implements ActionListener
         stage1 = "Stage: " + stage;
         g.drawString(stage1,25,75);
         g.drawString(counter1,25,100);
+        
+        if (stage == 1)
+        {
+            g.setColor(Color.black);
+            g.fillOval(200,200,150,150);
+            g.fillPolygon(new int[] {325, 375, 350}, new int[] {275, 275, 375}, 3);
+            g.fillPolygon(new int[] {225, 175, 200}, new int[] {275, 275, 375}, 3);
+            
+            g.setColor(Color.white);
+            g.fillOval(240,240,25,30);
+            g.fillOval(280,240,25,30);
+            g.fillArc(220, 255, 100, 60, 0, -180); 
+        }
     }
 
     public void init() {
@@ -30,8 +46,6 @@ public class javamon extends Applet implements ActionListener
         add(button1);
         button1.addActionListener(this);
 
-        JComboBox<String> comboLanguage = new JComboBox<String>();
-        Choice types = new Choice();
         types.add("Air");
         types.add("Poison");        
         types.add("Electicity");
