@@ -7,7 +7,7 @@ import java.io.*;
 /**
  * This applet class displays all the information collected through the creature class and also prints the images depending on the type and stage you choose.
  * 
- * @Authors: annidhi and Lesya 
+ * @Authors: Sannidhi and Lesya 
  * @5/26/16
  */
 public class javamon extends Applet implements ActionListener
@@ -65,7 +65,7 @@ public class javamon extends Applet implements ActionListener
                 g.drawString(name,600,400); //draws the string name on applet
                 repaint(); 
             }
-            else 
+            else //type equals poison
             {
                 toxikitty = getImage(getCodeBase(),"toxikitty.jpg"); //accesses image which is located in the same folder as the code
                 g.drawImage(toxikitty,200,200,this);  //displays the image
@@ -96,7 +96,7 @@ public class javamon extends Applet implements ActionListener
                 g.drawString(name,600,400); //draws the string name on applet
                 repaint();
             }
-            else 
+            else //type equals poison
             {
                 plaguecat = getImage(getCodeBase(),"plaguecat.jpg"); //accesses image which is located in the same folder as the code
                 g.drawImage(plaguecat,200,200,this);  //displays the image
@@ -106,7 +106,7 @@ public class javamon extends Applet implements ActionListener
                 repaint();
             }
         }
-        else
+        else //stage 3
         {
             if (types.getSelectedItem() == "Air")
             {
@@ -126,7 +126,7 @@ public class javamon extends Applet implements ActionListener
                 g.drawString(name,600,400); //draws the string name on applet
                 repaint();
             }
-            else 
+            else //type equals poison
             {
                 venompanther = getImage(getCodeBase(),"venompanther.jpg"); //accesses image which is located in the same folder as the code
                 g.drawImage(venompanther,200,200,this);  //displays the image
@@ -151,7 +151,6 @@ public class javamon extends Applet implements ActionListener
     }
 
     public void actionPerformed(ActionEvent e) {
-        
         if (e.getSource() == button1) //counter increases everytime the feed button is clicked
         {
             counter++; 

@@ -3,7 +3,7 @@ import java.util.*;
  * This creature class sets the current stages and names of the creatures and sends the information to the 
  * applet class to print on the applet screen
  * 
- * @Authors: annidhi and Lesya 
+ * @Authors: Sannidhi and Lesya 
  * @5/26/16
  */
 public class Creature 
